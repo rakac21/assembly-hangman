@@ -97,6 +97,7 @@ export default function Main() {
     function newGame() {
         setGuesses([])
         setDeadLangs(0)
+		setGameState('on')
         setLetters(generate({minLength: 7, maxLength: 13}).toUpperCase().split("")
             .map(item => {
                 return {letter: item, hidden: true}
